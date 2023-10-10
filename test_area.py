@@ -2,14 +2,12 @@ from area import area_of_square
 import pytest
 
 
-def test_area_of_square():
+def test_area_of_square_valid():
     assert area_of_square(1) == 1
     assert area_of_square(2) == 4
     assert area_of_square(0.5) == 0.25
     assert area_of_square(0.2) == pytest.approx(0.04)
 
-    try:
+def test_area_of_square_invalid():
+    with pytest.raises(ValueError):
         area_of_square(-2)
-        assert False
-    except ValueError:
-        assert True
