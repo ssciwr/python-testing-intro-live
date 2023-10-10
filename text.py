@@ -1,3 +1,6 @@
+import requests
+
+
 def count_lines(filename):
     with open(filename) as f:
         lines = f.readlines()
@@ -11,3 +14,7 @@ def count_characters(filename):
     # for line in lines:
     #    sum = sum + len(line)
     return sum(len(line) for line in lines)
+
+
+def count_bytes(url):
+    return len(requests.get(url).content)
