@@ -1,5 +1,6 @@
 from text import count_lines
 
+
 @pytest.fixture
 def temp_filename(tmp_path):
     filename = tmp_path / "tmp.txt"
@@ -8,5 +9,6 @@ def temp_filename(tmp_path):
         f.write("hello")
     return filename
 
-def test_count_lines(tmp_path):
-    assert count_lines(filename) == 1
+
+def test_count_lines(temp_filename):
+    assert count_lines(temp_filename) == 1
