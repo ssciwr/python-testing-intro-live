@@ -13,7 +13,7 @@ def temp_filename(tmp_path):
 
 @pytest.fixture
 def long_temp_filename(temp_filename):
-    with open(temp_filename, "w") as f:
+    with open(temp_filename, "a") as f:
         f.write("\nworld")
     return temp_filename
 
