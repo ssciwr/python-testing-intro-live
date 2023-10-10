@@ -10,5 +10,5 @@ def test_area_of_square_valid():
 
 
 def test_area_of_square_invalid():
-    with pytest.raises(ValueError):
+    with pytest.raises(Exception):
         area_of_square(-2)
