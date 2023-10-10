@@ -32,5 +32,9 @@ def test_count_lines_long(long_temp_filename):
 
 
 def test_count_bytes(monkeypatch):
+
+    class FakeRequestsObject:
+        def __int__(self):
+            self.content = b"abc"
     url = "https://github.com/ssciwr/python-testing-intro-live/raw/main/README.md"
     assert count_bytes(url) == 260
