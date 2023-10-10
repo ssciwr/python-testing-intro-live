@@ -19,6 +19,6 @@ def test_area_of_square_invalid_type():
     with pytest.raises(TypeError):
         area_of_square("2")
 
-
+@pytest.mark.parametrize("width", [1, 4, 0.4, 2.7])
 def test_area_of_rectangle_swap_width_length(length, width):
     assert area_of_rectangle(length, width) == pytest.approx(area_of_rectangle(width, length))
