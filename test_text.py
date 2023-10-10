@@ -37,7 +37,7 @@ def test_count_bytes(monkeypatch):
         def __int__(self):
             self.content = b"abc"
 
-    monkeypatch.setattr(requests, "get", lambda url: return FakeRequestsObject())
+    monkeypatch.setattr(requests, "get", lambda url: FakeRequestsObject())
 
     url = "https://github.com/ssciwr/python-testing-intro-live/raw/main/README.md"
     assert count_bytes(url) == 260
