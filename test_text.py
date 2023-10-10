@@ -24,6 +24,7 @@ def test_our_text(tmp_path):
     filename = make_file(tmp_path, "our text")
     assert count_lines(filename) == 1
 
+
 @pytest.fixture
 def long_temp_filename(temp_filename):
     with open(temp_filename, "a") as f:
