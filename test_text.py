@@ -35,6 +35,12 @@ def make_file_fixture(tmp_path):
         return filename
     return _callable
 
+
+def test_our_text2(make_file_fixture):
+    filename = make_file_fixture("our text")
+    assert count_lines(filename) == 1
+
+
 @pytest.fixture
 def long_temp_filename(temp_filename):
     with open(temp_filename, "a") as f:
