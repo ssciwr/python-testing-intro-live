@@ -1,4 +1,5 @@
 from text import count_lines
+import pytest
 
 
 @pytest.fixture
