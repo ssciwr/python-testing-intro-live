@@ -1,5 +1,6 @@
 from text import count_lines, count_characters, count_bytes
 import pytest
+import requests
 
 
 @pytest.fixture
