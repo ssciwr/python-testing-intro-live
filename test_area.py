@@ -9,7 +9,7 @@ def test_area_of_square_valid():
     assert area_of_square(0.2) == pytest.approx(0.04)
 
 
-@pytest.mark.parametrize("length", [-2, -5])
+@pytest.mark.parametrize("length", [-2, -5, -0.8325])
 def test_area_of_square_invalid_value(length):
     with pytest.raises(ValueError):
         area_of_square(length)
