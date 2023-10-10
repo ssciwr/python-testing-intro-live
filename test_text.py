@@ -25,5 +25,6 @@ def test_count_lines(temp_filename):
 def test_count_characters(temp_filename):
     assert count_characters(temp_filename) == 5
 
+
 def test_count_lines_long(long_temp_filename):
     assert count_lines(long_temp_filename) == 2
