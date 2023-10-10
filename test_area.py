@@ -1,6 +1,7 @@
 from area import area_of_square, area_of_rectangle
 import pytest
 
+
 @pytest.mark.parametrize(["input", "output"], [(1, 1), (2, 4), (0.5, 0.25), (0.2,0.04)])
 def test_area_of_square_valid(input, output):
     assert area_of_square(input) == pytest.approx(output)
