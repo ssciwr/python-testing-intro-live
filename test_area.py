@@ -18,3 +18,7 @@ def test_area_of_square_invalid_value(length):
 def test_area_of_square_invalid_type():
     with pytest.raises(TypeError):
         area_of_square("2")
+
+
+def test_area_of_rectangle_swap_width_length():
+    assert area_of_rectangle(1, 2) == area_of_rectangle(2, 1)
