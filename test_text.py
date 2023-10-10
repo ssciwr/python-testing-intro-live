@@ -35,8 +35,9 @@ def test_count_bytes(monkeypatch):
 
     class FakeRequestsObject:
         reponse = {"url": ""}
-        def __init__(self):
+        def __init__(self, url):
             self.content = b"abc"
+
 
     monkeypatch.setattr(requests, "get", lambda url: FakeRequestsObject())
 
