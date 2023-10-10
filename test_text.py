@@ -39,5 +39,5 @@ def test_count_bytes(monkeypatch):
 
     monkeypatch.setattr(requests, "get", lambda _: FakeRequestsObject())
 
-    url = "https://github.com/ssciwr/python-testing-intro-live/raw/main/README.md"
+    url = "sdgfsd"
     assert count_bytes(url) == 3
