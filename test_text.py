@@ -31,4 +31,4 @@ def test_count_lines_long(long_temp_filename):
 
 
 def test_count_bytes():
-    
+    assert count_bytes(url) == 123
