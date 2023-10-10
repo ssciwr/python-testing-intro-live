@@ -1,5 +1,4 @@
 def area_of_square(length):
-    print(length)
     return area_of_rectangle(length, length)
 
 
