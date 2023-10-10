@@ -9,10 +9,13 @@ def test_area_of_square_valid():
     assert area_of_square(0.2) == pytest.approx(0.04)
 
 
-def test_area_of_square_invalid():
+def test_area_of_square_invalid_value():
     with pytest.raises(ValueError):
         area_of_square(-2)
     with pytest.raises(ValueError):
         area_of_square(-5)
-    with pytest.raises(ValueError):
+
+
+def test_area_of_square_invalid_type():
+    with pytest.raises(TypeError):
         area_of_square("2")
