@@ -34,6 +34,7 @@ def test_count_lines_long(long_temp_filename):
 def test_count_bytes(monkeypatch):
 
     class FakeRequestsObject:
+        reponse = {"url": ""}
         def __init__(self):
             self.content = b"abc"
 
