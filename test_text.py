@@ -1,4 +1,4 @@
-from text import count_lines, count_characters
+from text import count_lines, count_characters, count_bytes
 import pytest
 
 
@@ -28,3 +28,7 @@ def test_count_characters(temp_filename):
 
 def test_count_lines_long(long_temp_filename):
     assert count_lines(long_temp_filename) == 2
+
+
+def test_count_bytes():
+    
