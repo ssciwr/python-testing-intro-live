@@ -30,6 +30,6 @@ def test_count_lines_long(long_temp_filename):
     assert count_lines(long_temp_filename) == 2
 
 
-def test_count_bytes():
+def test_count_bytes(monkeypatch):
     url = "https://github.com/ssciwr/python-testing-intro-live/raw/main/README.md"
     assert count_bytes(url) == 260
