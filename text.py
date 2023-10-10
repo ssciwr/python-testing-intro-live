@@ -7,4 +7,7 @@ def count_lines(filename):
 def count_characters(filename):
     with open(filename) as f:
         lines = f.readlines()
+    # sum = 0
+    # for line in lines:
+    #    sum = sum + len(line)
     return sum(len(line) for line in lines)
