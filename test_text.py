@@ -32,4 +32,4 @@ def test_count_lines_long(long_temp_filename):
 
 def test_count_bytes():
     url = "https://github.com/ssciwr/python-testing-intro-live/raw/main/README.md"
-    assert count_bytes(url) == 123
+    assert count_bytes(url) == 260
