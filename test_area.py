@@ -20,5 +20,5 @@ def test_area_of_square_invalid_type():
         area_of_square("2")
 
 
-def test_area_of_rectangle_swap_width_length():
-    assert area_of_rectangle(1, 2) == pytest.approx(area_of_rectangle(2, 1))
+def test_area_of_rectangle_swap_width_length(length, width):
+    assert area_of_rectangle(length, width) == pytest.approx(area_of_rectangle(width, length))
