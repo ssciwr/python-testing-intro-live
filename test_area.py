@@ -8,4 +8,8 @@ def test_area_of_square():
     assert area_of_square(0.5) == 0.25
     assert area_of_square(0.2) == pytest.approx(0.04)
 
-    assert area_of_square(-2) == 4
+    try:
+        area_of_square(-2)
+        assert False
+    except ValueError:
+        assert True
