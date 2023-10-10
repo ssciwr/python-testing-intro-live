@@ -1,4 +1,4 @@
-from area import area_of_square
+from area import area_of_square, area_of_rectangle
 import pytest
 
 
