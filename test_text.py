@@ -26,6 +26,16 @@ def test_our_text(tmp_path):
 
 
 @pytest.fixture
+def make_file_fixture(tmp_path):
+    def _callable(text):
+        filename = tmp_path / "tmp.txt"
+        print(filename)
+        with open(filename, "w") as f:
+            f.write(text)
+        return filename
+    return _callable
+
+@pytest.fixture
 def long_temp_filename(temp_filename):
     with open(temp_filename, "a") as f:
         f.write("\nworld")
