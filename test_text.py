@@ -38,7 +38,7 @@ def test_count_bytes(monkeypatch):
         def __init__(self):
             self.content = b"abc"
 
-    monkeypatch.setattr(requests, "get", lambda _: FakeRequestsObject())
+    monkeypatch.setattr(requests, "get", lambda url: FakeRequestsObject())
 
     url = "sdgfsd"
     assert count_bytes(url) == 3
