@@ -11,6 +11,13 @@ def temp_filename(tmp_path):
     return filename
 
 
+@pytest.fixture
+def long_temp_filename(temp_filename):
+    with open(temp_filename, "w") as f:
+        f.write("\nworld")
+    return temp_filename
+
+
 def test_count_lines(temp_filename):
     assert count_lines(temp_filename) == 1
 
