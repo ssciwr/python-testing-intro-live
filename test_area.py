@@ -12,4 +12,4 @@ def test_area_of_square():
 def test_area_of_square_negative_inputs(length):
     with pytest.raises(ValueError) as e:
         area_of_square(length)
-    assert "negative" in str(e2.value).lower()
+    assert "negative" in str(e.value).lower()
