@@ -4,7 +4,7 @@ import requests
 
 @pytest.fixture()
 def temp_file(tmp_path):
-    def func(n_lines = 2):
+    def func(n_lines):
         temp_file = tmp_path / "file.txt"
         with open(temp_file, "w") as f:
             for _ in range(n_lines):
