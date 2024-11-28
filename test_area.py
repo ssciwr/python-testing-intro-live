@@ -9,4 +9,5 @@ def test_area_of_square():
 
 
 def test_area_of_square_invalid():
-    area_of_square(-1)
+    with pytest.raises():
+        area_of_square(-1)
