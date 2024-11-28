@@ -1,7 +1,11 @@
 from text import count_lines
+import pytest
 
-def test_count_lines(tmp_path):
+@pytest.fixture
+def temp_file(tmp_path):
     temp_file = tmp_path / "file.txt"
     with open(temp_file, "w") as f:
         f.write("Hello")
+
+def test_count_lines(tmp_path):
     assert count_lines(temp_file) == 2
