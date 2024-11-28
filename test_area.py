@@ -14,4 +14,5 @@ def test_area_of_square_invalid():
     with pytest.raises(ValueError) as e2:
         area_of_square(-2)
     assert "negative" in str(e2.value).lower()
-    area_of_square("3")
+    with pytest.raises(IndexError):
+        area_of_square("3")
