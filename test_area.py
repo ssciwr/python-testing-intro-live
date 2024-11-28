@@ -9,8 +9,8 @@ def test_area_of_square():
 
 
 def test_area_of_square_invalid():
-    with pytest.raises(ValueError) as e:
+    with pytest.raises(ValueError) as e1:
         area_of_square(-1)
-    with pytest.raises(ValueError) as e:
-        area_of_square(2)
-    assert "negative" in str(e.value).lower()
+    with pytest.raises(ValueError) as e2:
+        area_of_square(-2)
+    assert "negative" in str(e2.value).lower()
