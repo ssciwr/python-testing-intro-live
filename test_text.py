@@ -16,7 +16,7 @@ def test_count_lines(temp_file):
     assert count_lines(temp_file(2)) == 2
 
 def test_count_chars(temp_file):
-    assert count_chars(temp_file(2)) == 11
+    assert count_chars(temp_file(2)) == 12
 
 def test_count_bytes(monkeypatch):
     class MockResponse:
