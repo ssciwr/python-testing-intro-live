@@ -12,8 +12,9 @@ def temp_file(tmp_path):
         return temp_file
     return func
 
-def test_count_lines(temp_file):
-    assert count_lines(temp_file(2)) == 2
+@pytest.mark.parametrize("n_lines", [1, 2, 3])
+def test_count_lines(temp_file, n_lines):
+    assert count_lines(temp_file(n_lines)) == n_lines
 
 def test_count_chars(temp_file):
     assert count_chars(temp_file(2)) == 12
