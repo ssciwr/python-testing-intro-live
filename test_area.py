@@ -19,3 +19,8 @@ def test_area_of_square_negative_inputs(length):
 @pytest.mark.parametrize("width", [1, 2, 4.66])
 def test_area_of_rectangle_swap_length_width_gives_same_area():
     assert area_of_rectangle(2, 3) == area_of_rectangle(3, 2)
+
+@pytest.mark.parametrize(["length", "width"], [(1, 2), (2, 4.66)])
+def test_area_of_rectangle_swap_length_width_gives_same_area2():
+    assert area_of_rectangle(2, 3) == area_of_rectangle(3, 2)
+
