@@ -1,7 +1,5 @@
 def area_of_square(side):
-    if side < 0:
-        raise ValueError("side must be non-negative")
-    return side * side
+    return area_of_rectangle(side, side)
 
 def area_of_rectangle(width, length):
     if width < 0 or length < 0:
