@@ -11,4 +11,4 @@ def test_area_of_square():
 def test_area_of_square_invalid():
     with pytest.raises(ValueError) as e:
         area_of_square(-1)
-        assert "negativQ" in str(e.value)
+    assert "negativQ" in str(e.value)
