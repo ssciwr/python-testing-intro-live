@@ -17,7 +17,7 @@ def test_count_chars(temp_file):
 
 def test_count_bytes(monkeypatch):
     class MockResponse:
-        content = b"Hiq"
+        content = b"Hi"
 
     def mock_get(url):
         return MockResponse()
