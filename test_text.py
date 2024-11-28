@@ -1,7 +1,7 @@
 from text import count_lines, count_chars
 import pytest
 
-@pytest.fixture
+@pytest.fixture(scope="module")
 def temp_file(tmp_path):
     temp_file = tmp_path / "file.txt"
     with open(temp_file, "w") as f:
