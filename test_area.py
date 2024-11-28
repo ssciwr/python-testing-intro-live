@@ -13,3 +13,5 @@ def test_area_of_square_negative_inputs(length):
     with pytest.raises(ValueError) as e:
         area_of_square(length)
     assert "negative" in str(e.value).lower()
+
+def test_area_of_rectangle_swap_length_width_gives_same_area():
