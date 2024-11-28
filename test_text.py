@@ -1,4 +1,4 @@
-from text import count_lines, count_chars
+from text import count_lines, count_chars, count_bytes
 import pytest
 
 @pytest.fixture()
