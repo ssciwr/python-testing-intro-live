@@ -13,7 +13,7 @@ def temp_file(tmp_path):
     return func
 
 def test_count_lines(temp_file):
-    assert count_lines(temp_file) == 2
+    assert count_lines(temp_file(2)) == 2
 
 def test_count_chars(temp_file):
     assert count_chars(temp_file) == 11
