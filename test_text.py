@@ -4,10 +4,12 @@ import requests
 
 @pytest.fixture()
 def temp_file(tmp_path):
-    temp_file = tmp_path / "file.txt"
-    with open(temp_file, "w") as f:
-        f.write("Hello\nWorld")
-    return temp_file
+    def func(n_lines):
+        temp_file = tmp_path / "file.txt"
+        with open(temp_file, "w") as f:
+            for _ in range(n_lines):
+                f.write("Hello\n")
+        return temp_file
 
 def test_count_lines(temp_file):
     assert count_lines(temp_file) == 2
