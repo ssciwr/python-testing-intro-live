@@ -16,4 +16,6 @@ def test_count_chars(temp_file):
     assert count_chars(temp_file) == 11
 
 def test_count_bytes(monkeypatch):
+    class MockResponse:
+        self.content = b"Hi"
     assert count_bytes("http://www.google.com") == 18687
