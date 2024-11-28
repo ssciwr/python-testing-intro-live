@@ -14,5 +14,5 @@ def test_count_lines(temp_file):
 def test_count_chars(temp_file):
     assert count_chars(temp_file) == 11
 
-def test_count_bytes():
+def test_count_bytes(monkeypatch):
     assert count_bytes("http://www.google.com") == 18687
