@@ -13,3 +13,6 @@ def test_count_lines(temp_file):
 
 def test_count_chars(temp_file):
     assert count_chars(temp_file) == 11
+
+def test_count_bytes():
+    assert count_bytes("http://www.google.com") == 12
