@@ -24,4 +24,4 @@ def test_count_bytes(monkeypatch):
 
     monkeypatch.setattr(requests, "get", mock_get)
 
-    assert count_bytes("http://www.google.com") == 2
+    assert count_bytes("http://www.google.com") == len(MockResponse.content)
