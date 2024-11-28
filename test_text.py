@@ -1,5 +1,6 @@
 from text import count_lines, count_chars, count_bytes
 import pytest
+import requests
 
 @pytest.fixture()
 def temp_file(tmp_path):
