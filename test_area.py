@@ -10,8 +10,6 @@ def test_area_of_square():
 
 @pytest.mark.parametrize("length", [-1, -2, -4.66])
 def test_area_of_square_negative_inputs(length):
-    with pytest.raises(ValueError) as e1:
-        area_of_square(-1)
-    with pytest.raises(ValueError) as e2:
-        area_of_square(-2)
+    with pytest.raises(ValueError) as e:
+        area_of_square(length)
     assert "negative" in str(e2.value).lower()
