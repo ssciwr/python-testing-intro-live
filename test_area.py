@@ -15,3 +15,4 @@ def test_area_of_square_negative_inputs(length):
     assert "negative" in str(e.value).lower()
 
 def test_area_of_rectangle_swap_length_width_gives_same_area():
+    assert area_of_rectangle(2, 3) == area_of_rectangle(3, 2)
