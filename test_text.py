@@ -1,4 +1,4 @@
-from text import count_lines
+from text import count_lines, count_chars
 import pytest
 
 @pytest.fixture
@@ -10,3 +10,6 @@ def temp_file(tmp_path):
 
 def test_count_lines(temp_file):
     assert count_lines(temp_file) == 2
+
+def test_count_chars(temp_file):
+    assert count_chars(temp_file) == 12
