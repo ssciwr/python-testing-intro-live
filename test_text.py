@@ -10,6 +10,7 @@ def temp_file(tmp_path):
             for _ in range(n_lines):
                 f.write("Hello\n")
         return temp_file
+    return func
 
 def test_count_lines(temp_file):
     assert count_lines(temp_file) == 2
