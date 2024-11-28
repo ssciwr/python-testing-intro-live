@@ -8,6 +8,7 @@ def test_area_of_square():
     assert area_of_square(0.2) == pytest.approx(0.04)
 
 
+@pytest.mark.parametrize("length", [-1, -2, -4.66])
 def test_area_of_square_negative_inputs():
     with pytest.raises(ValueError) as e1:
         area_of_square(-1)
