@@ -8,5 +8,5 @@ def temp_file(tmp_path):
         f.write("Hello")
     return temp_file
 
-def test_count_lines(tmp_path):
+def test_count_lines(temp_file):
     assert count_lines(temp_file) == 2
