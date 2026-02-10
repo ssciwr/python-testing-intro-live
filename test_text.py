@@ -1,4 +1,4 @@
-from text import count_lines, count_characters
+from text import count_lines, count_characters, count_bytes
 import pytest
 
 
@@ -14,3 +14,6 @@ def test_count_lines(our_temp_file):
 
 def test_count_characters(our_temp_file):
     assert count_characters(our_temp_file) == 20
+
+def test_count_bytes():
+    assert count_bytes("https://www.google.com") == 10
