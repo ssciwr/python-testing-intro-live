@@ -23,4 +23,4 @@ def test_count_bytes(monkeypatch):
             self.content = b"asdsad"
 
     monkeypatch(requests, "get", lambda r: MockResponse())
-    assert count_bytes("https://www.google.com") == 17388
+    assert count_bytes("https://www.google.com") == 6
