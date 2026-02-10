@@ -14,8 +14,8 @@ def our_temp_file(tmp_path):
         return file
     return make_temp_file
 
-
-def test_count_lines(our_temp_file):
+@pytest.mark.parametrize("num_lines", [0, 1, 4, 9999])
+def test_count_lines(our_temp_file, num_lines):
     assert count_lines(our_temp_file(3)) == 3
 
 def test_count_characters(our_temp_file):
