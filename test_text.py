@@ -1,4 +1,4 @@
-from text import count_lines
+from text import count_lines, count_characters
 import pytest
 
 
@@ -11,3 +11,6 @@ def our_temp_file(tmp_path):
 
 def test_count_lines(our_temp_file):
     assert count_lines(our_temp_file) == 3
+
+def test_count_characters(our_temp_file):
+    assert count_characters(our_temp_file) == 21
