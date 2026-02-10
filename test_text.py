@@ -7,6 +7,7 @@ import requests
 def our_temp_file(tmp_path):
     def make_temp_file(num_lines):
         file = tmp_path / "test.txt"
+        lines = ""
         for line in range(num_lines):
             file.write_text(f"line{line}\n", append=True)
         return file
