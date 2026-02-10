@@ -1,7 +1,5 @@
 def area(side_length):
-    if side_length < 0:
-        raise ValueError("please note side_length cannot be negative")
-    return side_length ** 2
+    return area_rectangle(side_length, side_length)
 
 
 def area_rectangle(length, width):
