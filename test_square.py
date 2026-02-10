@@ -19,5 +19,6 @@ def test_area_string():
     with pytest.raises(TypeError):
         area("1")
 
-def test_area_rectangle_valid():
+@pytest.mark.parametrize(["length", "width"], [(1,2), (0.5, 0.1)])
+def test_area_rectangle_valid(length, width):
     assert area_rectangle(2, 6) == pytest.approx(12)
