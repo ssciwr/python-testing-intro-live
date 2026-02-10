@@ -10,5 +10,7 @@ def test_area_valid():
 def test_area_negative():
     with pytest.raises(ValueError) as exc_info:
         area(-2)
+    assert "negative" in str(exc_info.value).lower()
+    with pytest.raises(ValueError) as exc_info:
         area(1)
     assert "negative" in str(exc_info.value).lower()
