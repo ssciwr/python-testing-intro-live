@@ -22,5 +22,5 @@ def test_count_bytes(monkeypatch):
         def __init__(self):
             self.content = b"asdsad"
 
-    monkeypatch(requests, "get", lambda r: MockResponse())
+    monkeypatch.setattr(requests, "get", lambda r: MockResponse())
     assert count_bytes("https://www.google.com") == 6
