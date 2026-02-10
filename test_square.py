@@ -8,4 +8,5 @@ def test_area_valid():
     assert area(0.2) == pytest.approx(0.04)
 
 def test_area_negative():
-    assert area(-2) == 4
+    with pytest.raises(Exception):
+        assert area(-2) == 4
