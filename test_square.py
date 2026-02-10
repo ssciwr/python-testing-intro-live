@@ -8,6 +8,5 @@ def test_area_valid():
     assert area(0.2) == pytest.approx(0.04)
 
 def test_area_negative():
-    with pytest.raises(Exception):
-        my_list = [1,2]
-        my_list[4]
+    with pytest.raises(ValueError):
+        area(-2)
