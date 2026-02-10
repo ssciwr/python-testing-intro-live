@@ -8,10 +8,10 @@ def test_area_valid():
     assert area(0.2) == pytest.approx(0.04)
 
 
-@pytest.mark.parametrize("length", [-2, -1, +0.23423, -0.00001])
+@pytest.mark.parametrize("length", [-2, -1, -0.23423, -0.00001])
 def test_area_negative(length):
     with pytest.raises(ValueError) as exc_info:
-        area(length)
+        area(-length)
     assert "negative" in str(exc_info.value).lower()
 
 
