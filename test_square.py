@@ -22,3 +22,7 @@ def test_area_string():
 @pytest.mark.parametrize(["length", "width", "output"], [(1,2,2), (0.5, 0.1,0.05)])
 def test_area_rectangle_valid(length, width, output):
     assert area_rectangle(length, width) == pytest.approx(output)
+
+@pytest.mark.parametrize("length", [1, 4, 6.6])
+def test_area_rectangle_symmetric(length):
+    assert area_rectangle(length, 3) == area_rectangle(3, length)
