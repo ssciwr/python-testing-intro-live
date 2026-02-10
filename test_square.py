@@ -1,4 +1,4 @@
-from square import area
+from square import area, area_rectangle
 import pytest
 
 
@@ -18,3 +18,6 @@ def test_area_negative(length):
 def test_area_string():
     with pytest.raises(TypeError):
         area("1")
+
+def test_area_rectangle_valid():
+    assert area_rectangle(2, 6) == pytest.approx(12)
