@@ -1,5 +1,6 @@
 from text import count_lines, count_characters, count_bytes
 import pytest
+import requests
 
 
 @pytest.fixture()
@@ -15,5 +16,11 @@ def test_count_lines(our_temp_file):
 def test_count_characters(our_temp_file):
     assert count_characters(our_temp_file) == 20
 
-def test_count_bytes():
+def test_count_bytes(monkeypatch):
+
+    class MockResponse:
+        def __init__(self):
+            self.content = b"asdsad"
+
+    monkeypatch(requests, "get", )
     assert count_bytes("https://www.google.com") == 17388
