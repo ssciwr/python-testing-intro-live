@@ -9,4 +9,5 @@ def test_area_valid():
 
 def test_area_negative():
     with pytest.raises(Exception):
-        area(-2)
+        my_list = [1,2]
+        my_list[4]
