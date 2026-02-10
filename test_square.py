@@ -9,4 +9,4 @@ def test_area_valid():
 
 def test_area_negative():
     with pytest.raises(Exception):
-        assert area(-2) == 4
+        area(-2)
