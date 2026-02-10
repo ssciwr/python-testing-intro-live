@@ -19,7 +19,7 @@ def test_count_lines(our_temp_file):
     assert count_lines(our_temp_file(3)) == 3
 
 def test_count_characters(our_temp_file):
-    assert count_characters(our_temp_file) == 20
+    assert count_characters(our_temp_file(3)) == 6
 
 def test_count_bytes(monkeypatch):
 
