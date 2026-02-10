@@ -9,7 +9,8 @@ def our_temp_file(tmp_path):
         file = tmp_path / "test.txt"
         lines = ""
         for line in range(num_lines):
-            file.write_text(f"line{line}\n", append=True)
+            lines += str(line) + "\n"
+        file.write_text(lines)
         return file
     return make_temp_file
 
