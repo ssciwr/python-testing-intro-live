@@ -16,7 +16,7 @@ def our_temp_file(tmp_path):
 
 
 def test_count_lines(our_temp_file):
-    assert count_lines(our_temp_file) == 3
+    assert count_lines(our_temp_file(3)) == 3
 
 def test_count_characters(our_temp_file):
     assert count_characters(our_temp_file) == 20
